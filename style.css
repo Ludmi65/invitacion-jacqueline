@@ -1,0 +1,958 @@
+/* ESTILO GENERAL */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3edfa;
+}
+
+/* PORTADA */
+
+.portada {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    background: linear-gradient(
+    135deg,
+    #d5c0f0,
+    #f8f5fc,
+    #a98acb,
+    #e5d8f5
+);
+}
+.rosa {
+    position: absolute;
+    width: 200px !important;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.rosa-superior {
+    top: 0;
+    left: 0;
+}
+
+.rosa-inferior {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+}
+/* SUBTITULO */
+
+.subtitulo {
+    color: 	#806b9e;
+    letter-spacing: 5px;
+    font-size: 16px;
+}
+
+/* NOMBRE */
+
+h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 85px;
+    font-weight: 400;
+    color: 	#9076b5;
+    margin: 15px 0;
+}
+
+/* XV */
+
+h2 {
+    font-size: 100px;
+    margin: 5px 0;
+    background: linear-gradient(
+        135deg,
+        #777985,
+        #ffffff,
+        #a5a7b2,
+        #ffffff,
+        #777985
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 2px 2px 5px rgba(150, 150, 170, 0.3);
+}
+
+/* FRASE */
+
+.frase {
+    color: #62536f;
+    font-size: 17px;
+}
+
+/* INDICACION */
+
+.deslizar {
+    color: #62536f;
+    font-size: 13px;
+    margin-top: 45px;
+}
+
+.decoracion {
+    color: #a995c9;
+    font-size: 25px;
+    letter-spacing: 8px;
+    margin: 10px 0;
+    text-shadow: 0 0 8px rgba(169, 149, 201, 0.4);
+}
+
+
+/* SEGUNDA SECCION */
+
+.mensaje {
+    min-height: 100vh;
+    padding: 60px 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    isolation: isolate;
+    background: linear-gradient(
+       
+    135deg,
+    #eee5f8 0%,
+    #d9c9ed 35%,
+    #cbb7e3 65%,
+    #e6daf2 100%
+    );
+}
+.detalle-mensaje {
+    position: relative;
+    width: 100%;
+    height: 130px;
+    overflow: hidden;
+}
+
+.detalle-mensaje .mariposa-mensaje {
+    width: 230px;
+    max-width: none;
+    height: auto;
+    display: block;
+    position: absolute;
+    left: -250px;
+   top: 60%;
+   pointer-events: none;
+    animation: volar-mariposa 14s linear infinite;
+}
+
+@keyframes volar-mariposa {
+    0% {
+        left: -230px;
+        transform: translateY(-50%);
+    }
+
+    25% {
+        transform: translateY(calc(-50% - 12px));
+    }
+
+    50% {
+        transform: translateY(calc(-50% + 8px));
+    }
+
+    75% {
+        transform: translateY(calc(-50% - 10px));
+    }
+
+    100% {
+        left: 100%;
+        transform: translateY(-50%);
+    }
+}
+
+/* REFLEJOS PLATEADOS */
+.mensaje::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    background:
+        radial-gradient(ellipse at 15% 20%,
+            rgba(255, 255, 255, 0.8), transparent 22%),
+        radial-gradient(ellipse at 85% 35%,
+            rgba(255, 255, 255, 0.65), transparent 20%),
+        radial-gradient(ellipse at 50% 90%,
+            rgba(190, 192, 205, 0.35), transparent 25%);
+}
+
+.titulo-mensaje {
+    color: 	#806b9e;
+    letter-spacing: 4px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.mensaje h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 55px;
+    font-weight: 400;
+    color: 	#9076b5;
+    margin: 20px 0;
+}
+
+.texto-mensaje {
+    color: #62536f;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 450px;
+}
+
+.detalle-mensaje {
+    color: #9295a5;
+    font-size: 30px;
+    margin-top: 25px;
+}
+
+/* SECCION FOTOGRAFIA */
+
+.foto-jacqueline {
+    min-height: 100vh;
+    padding: 60px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  background: linear-gradient(
+    135deg,
+    #e5d8f3 0%,
+    #f5effa 30%,
+    #ffffff 55%,
+    #eee5f7 80%,
+    #dcd0ed 100%
+);
+}
+
+.titulo-foto {
+    color: #62536f;
+    letter-spacing: 4px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.foto-jacqueline h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 55px;
+    font-weight: 400;
+    color: #9076b5;
+}
+
+/* MARCO CON ESQUINAS ORNAMENTALES */
+
+.marco-foto {
+    width: 300px;
+    max-width: 85%;
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+    isolation: isolate;
+}
+
+.marco-foto img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+}
+.marco-foto::before {
+    content: none;
+}
+.marco-foto::after {
+    content: "";
+    position: absolute;
+    inset: -15px -25px;
+    border-radius: 50%;
+    z-index: -1;
+    background: radial-gradient(
+        ellipse,
+        rgba(170, 125, 225, 0.95) 0%,
+        rgba(195, 160, 235, 0.8) 45%,
+        rgba(225, 210, 245, 0.55) 70%,
+        transparent 100%
+    );
+    filter: blur(18px);
+}
+/* FOTOGRAFÍA */
+.marco-foto img {
+    display: block;
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center 45%;
+    border-radius: 8px;
+}
+
+/* DESTELLOS PLATEADOS TORNAsOL */
+.esquina {
+    position: absolute;
+    display: block;
+    z-index: 3;
+    pointer-events: none;
+    font-size: 34px;
+    line-height: 1;
+    background: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #9b83c5 25%,
+    #e5dafa 45%,
+    #9eabc9 65%,
+    #ffffff 85%,
+    #b69bdc 100%
+);
+
+ background-clip: text;
+-webkit-background-clip: text;
+color: transparent;
+
+filter: drop-shadow(0 0 5px rgba(150, 120, 200, 0.9));
+}
+/* POSICIÓN DE CADA DESTELLO */
+.superior-izquierda {
+    top: -20px;
+    left: -18px;
+}
+
+.superior-derecha {
+    top: -20px;
+    right: -18px;
+}
+
+.inferior-izquierda {
+    bottom: -25px;
+    left: -18px;
+    filter: drop-shadow(0 0 6px rgba(160, 130, 210, 1));
+}
+
+.inferior-derecha {
+    bottom: -23px;
+    right: -18px;
+}
+
+/* FRASE DEBAJO DE LA FOTO */
+.frase-foto {
+    color: #62536f;
+    font-size: 16px;
+    margin-top: 25px;
+    font-style: italic;
+}
+
+.brillos-foto {
+    position: absolute;
+    inset: -25px;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 4;
+}
+
+.brillos-foto span {
+    position: absolute;
+    color: #a58acb;
+    font-size: 19px;
+    font-weight: bold;
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #b99cde,
+        0 0 18px #9875c5;
+    animation: flotar-brillo 4s ease-in-out infinite;
+}
+.brillos-foto span:nth-child(1) {
+    top: 18%;
+    left: 18%;
+}
+
+.brillos-foto span:nth-child(2) {
+    top: 25%;
+    right: 12%;
+    animation-delay: 1s;
+}
+
+.brillos-foto span:nth-child(3) {
+    bottom: 15%;
+    left: 8%;
+    animation-delay: 2s;
+}
+
+.brillos-foto span:nth-child(4) {
+    bottom: 18%;
+    right: 18%;
+}
+
+@keyframes flotar-brillo {
+    0%, 100% {
+        opacity: 0.65;
+        transform: translateY(0) scale(0.9);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(-12px) scale(1.4);
+    }
+}
+
+/* DETALLES DE LA FIESTA */
+
+.detalles-fiesta {
+    min-height: 100vh;
+    padding: 60px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(
+    135deg,
+    #e9dff5 0%,
+    #f7f3fb 35%,
+    #ffffff 55%,
+    #eee6f7 80%,
+    #ded1ef 100%
+);
+}
+
+.titulo-detalles {
+    color: #62536f;
+    letter-spacing: 4px;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.detalles-fiesta h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 55px;
+    font-weight: 400;
+    color: #9076b5; #
+    margin: 20px 0 35px;
+}
+
+.tarjeta-detalles {
+    width: 320px;
+    max-width: 90%;
+    padding: 25px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid #c9badf;
+    border-radius: 15px;
+    box-shadow:
+        0 5px 20px rgba(100, 85, 125, 0.15),
+        inset 0 0 12px rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.detalle {
+    margin: 20px 0;
+}
+
+.icono-detalle {
+    font-size: 30px;
+    color: #a18bc3;
+}
+
+.detalle h3 {
+    color: #9076b5;
+    font-size: 19px;
+    margin: 8px 0;
+}
+
+.detalle p {
+    color: #62536f;
+    font-size: 16px;
+}
+
+.detalle:not(:last-child) {
+    border-bottom: 1px solid #d5c9e5;
+    padding-bottom: 20px;
+}
+
+.tarjeta-detalles {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-detalles:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(100, 85, 125, 0.25);
+}
+
+
+/* BOTÓN CÓMO LLEGAR */
+
+.boton-mapa {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 10px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #a995c9,
+        #8170a5
+    );
+    box-shadow: 0 3px 10px rgba(100, 85, 125, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boton-mapa:hover {
+    background: #62536f;
+    transform: scale(1.1);
+}
+
+.tarjeta-detalles {
+    position: relative;
+    overflow: visible;
+}
+
+.fuegos-artificiales {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: -25px;
+    left: 50%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.particula {
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    font-size: 25px;
+    color: #a985d5;
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 12px #c5a5f0,
+        0 0 20px #9870c9;
+}
+
+.fuegos-artificiales.explotar .particula {
+    animation: explosion 1.4s ease-out forwards;
+}
+
+.particula:nth-child(1) { --x: -110px; --y: -85px; }
+.particula:nth-child(2) { --x: -75px; --y: -145px; }
+.particula:nth-child(3) { --x: 0px; --y: -165px; }
+.particula:nth-child(4) { --x: 75px; --y: -145px; }
+.particula:nth-child(5) { --x: 110px; --y: -85px; }
+.particula:nth-child(6) { --x: 110px; --y: -15px; }
+.particula:nth-child(7) { --x: -110px; --y: -15px; }
+.particula:nth-child(8) { --x: 0px; --y: -65px; }
+
+@keyframes explosion {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(0.3) rotate(0deg);
+    }
+
+    70% {
+        opacity: 1;
+        transform: translate(var(--x), var(--y)) scale(1.5) rotate(90deg);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(var(--x), var(--y)) scale(0.4) rotate(180deg);
+    }
+}
+
+/* CUENTA REGRESIVA */
+
+.cuenta-regresiva {
+    min-height: 75vh;
+    padding: 60px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(
+        135deg,
+        #eee5fa,
+        #ffffff,
+        #ded1ef
+    );
+}
+
+.titulo-cuenta {
+    color: #a69abb;
+    letter-spacing: 3px;
+    font-size: 14px;
+}
+
+.cuenta-regresiva h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 60px;
+    font-weight: 400;
+    color: #9076b5;
+    margin: 15px 0 35px;
+}
+
+.contador {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tiempo {
+    width: 90px;
+    padding: 15px 5px;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid #c9badf;
+    border-radius: 15px;
+    box-shadow:
+        0 5px 20px rgba(100, 85, 125, 0.15),
+        inset 0 0 12px rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tiempo:hover {
+    background: #d9c9ed;
+    transform: scale(1.1);
+}
+
+.tiempo span {
+    font-size: 30px;
+    font-weight: bold;
+    color: #9076b5;
+}
+
+.tiempo p {
+    color: #756982;
+    font-size: 13px;
+    margin: 8px 0 0;
+}
+
+.frase-cuenta {
+    color: #81728f;
+    font-size: 16px;
+    font-style: italic;
+    margin-top: 35px;
+}
+
+/* LLUVIA DE BRILLOS */
+
+.lluvia-brillos {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.brillito {
+    position: absolute;
+    top: -20px;
+    color: #ffffff;
+    text-shadow: 0 0 6px #bda5e5,
+                 0 0 12px #ffffff;
+    animation: caer-brillo linear infinite;
+}
+
+@keyframes caer-brillo {
+    0% {
+        transform: translateY(-20px) rotate(0deg);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    80% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(180deg);
+        opacity: 0;
+    }
+}
+
+/* MOÑO DE SATÉN */
+
+.imagen-mono {
+    display: block;
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+        margin: 0 auto 0;
+    animation: movimiento-mono 4s ease-in-out infinite;
+}
+
+@keyframes movimiento-mono {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.mensaje-final {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.mensaje-final h3 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    font-weight: 400;
+    color: #806b9e;
+    margin: 10px 0;
+}
+
+.mensaje-final h4 {
+    color: #9076b5;
+    font-size: 19px;
+    letter-spacing: 2px;
+    margin: 12px 0;
+}
+
+.mensaje-final p {
+    color: #62536f;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.firma {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.texto-tecleado {
+    display: inline-block;
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #806b9e;
+    color: #62536f;
+    font-size: 15px;
+    animation:
+        escribir-firma 4s steps(27, end) forwards,
+        cursor-firma 0.7s step-end infinite;
+}
+
+.nombre-firma {
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    font-weight: 400;
+    color: #9076b5;
+}
+
+@keyframes escribir-firma {
+    from {
+        width: 0;
+    }
+    to {
+        width: 27ch;
+    }
+}
+
+@keyframes cursor-firma {
+    50% {
+        border-color: transparent;
+    }
+}
+
+
+/* ADAPTACIÓN PARA CELULARES */
+@media screen and (max-width: 600px) {
+
+ .portada {
+    height: 100svh;
+    min-height: 100svh;
+    padding: 12px 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+    justify-content: center;
+}
+  h1 {
+        font-size: 65px;
+        margin: 12px 0;
+    }
+
+    h2 {
+        font-size: 80px;
+        margin: 5px 0;
+    }
+
+    .frase {
+        font-size: 15px;
+        max-width: 300px;
+        line-height: 1.6;
+    }
+
+ .rosa {
+        width: 115px !important;
+    }
+
+    .rosa-superior {
+        top: 5px;
+        left: 5px;
+    }
+
+   .rosa-inferior {
+    bottom: 5px;
+    right: 5px;
+}
+.marco-foto {
+    width: 270px;
+    max-width: 85%;
+    margin: 0 auto;
+}
+
+.marco-foto img {
+    height: 340px;
+}
+
+ .frase-foto {
+        font-size: 14px;
+        max-width: 300px;
+        line-height: 1.6;
+        margin-top: 20px;
+    }
+.mensaje {
+        min-height: 100svh;
+        padding: 45px 18px;
+    }
+
+    .titulo-mensaje {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+.mensaje h2 {
+        font-size: 45px;
+        margin: 15px 0;
+    }
+
+    .texto-mensaje {
+        font-size: 15px;
+        line-height: 1.7;
+        max-width: 320px;
+    }
+
+    .detalle-mensaje {
+        font-size: 26px;
+        margin-top: 20px;
+    }
+.foto-jacqueline {
+    min-height: 100svh;
+    padding: 45px 18px;
+}
+
+.titulo-foto {
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+
+    .foto-jacqueline h2 {
+    font-size: 45px;
+    margin: 15px 0;
+}
+
+ .detalles-fiesta {
+        min-height: 100svh;
+        padding: 45px 18px;
+    }
+
+    .titulo-detalles {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .detalles-fiesta h2 {
+        font-size: 43px;
+        margin: 15px 0 25px;
+    }
+
+    .tarjeta-detalles {
+        width: 300px;
+        max-width: 95%;
+        padding: 20px;
+    }
+
+    .detalle {
+        margin: 15px 0;
+    }
+
+    .icono-detalle {
+        font-size: 27px;
+    }
+
+    .detalle h3 {
+        font-size: 17px;
+    }
+
+    .detalle p {
+        font-size: 15px;
+    }
+
+    .boton-mapa {
+        padding: 9px 20px;
+        font-size: 14px;
+    }
+
+    .cuenta-regresiva {
+    min-height: 100svh;
+        padding: 45px 15px;
+    }
+
+    .titulo-cuenta {
+        font-size: 12px;
+        letter-spacing: 2px;
+    }
+
+    .cuenta-regresiva h2 {
+        font-size: 48px;
+        margin: 12px 0 25px;
+    }
+
+    .contador {
+        gap: 10px;
+    }
+
+    .tiempo {
+        width: 75px;
+        padding: 12px 4px;
+    }
+
+    .tiempo span {
+        font-size: 25px;
+    }
+
+    .tiempo p {
+        font-size: 12px;
+    }
+
+    .frase-cuenta {
+        font-size: 14px;
+        margin-top: 25px;
+    }
+
+}
