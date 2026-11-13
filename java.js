@@ -86,3 +86,27 @@ const observarFuegos = new IntersectionObserver((entradas) => {
 });
 
 observarFuegos.observe(seccionDetalles);
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const seccionMensaje = document.querySelector(".mensaje");
+
+    const observarMariposa = new IntersectionObserver((entradas) => {
+
+        entradas.forEach((entrada) => {
+
+            if (entrada.isIntersecting) {
+                seccionMensaje.classList.add("mariposa-activa");
+            } else {
+                seccionMensaje.classList.remove("mariposa-activa");
+            }
+
+        });
+
+    }, {
+        threshold: 0.3
+    });
+
+    observarMariposa.observe(seccionMensaje);
+
+});
