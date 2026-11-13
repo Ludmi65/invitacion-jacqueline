@@ -142,6 +142,10 @@ h2 {
     left: -250px;
    top: 60%;
    pointer-events: none;
+    ananimation: none;
+}
+
+.mensaje.mariposa-activa .mariposa-mensaje {
     animation: volar-mariposa 14s linear infinite;
 }
 
@@ -168,6 +172,42 @@ h2 {
         transform: translateY(-50%);
     }
 }
+
+
+/* Mariposa mediana */
+.detalle-mensaje .mariposa-mensaje.mariposa-mediana {
+    width: 170px;
+    top: 55%;    
+    z-index: 2;
+}
+
+/* Mariposa pequeña */
+.detalle-mensaje .mariposa-mensaje.mariposa-chica {
+    width: 120px;
+    top: 75%;
+    z-index: 1;
+}
+
+/* Mariposa principal */
+.detalle-mensaje .mariposa-mensaje:not(.mariposa-mediana):not(.mariposa-chica) {
+    z-index: 3;
+}
+
+/* La grande sale primero */
+.mensaje.mariposa-activa .mariposa-mensaje:not(.mariposa-mediana):not(.mariposa-chica) {
+    animation-delay: 0s;
+}
+
+/* La mediana sale después */
+.mensaje.mariposa-activa .mariposa-mediana {
+    animation-delay: 2s;
+}
+
+/* La pequeña sale última */
+.mensaje.mariposa-activa .mariposa-chica {
+    animation-delay: 4s;
+}
+
 
 /* REFLEJOS PLATEADOS */
 .mensaje::before {
@@ -271,6 +311,24 @@ h2 {
     object-fit: cover;
     border-radius: 15px;
     display: block;
+
+   -webkit-mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 65%,
+    rgba(0, 0, 0, 0.8) 78%,
+    rgba(0, 0, 0, 0.4) 88%,
+    transparent 100%
+);
+
+mask-image: linear-gradient(
+    to bottom,
+    black 0%,
+    black 65%,
+    rgba(0, 0, 0, 0.8) 78%,
+    rgba(0, 0, 0, 0.4) 88%,
+    transparent 100%
+);
 }
 .marco-foto::before {
     content: none;
@@ -464,6 +522,11 @@ filter: drop-shadow(0 0 5px rgba(150, 120, 200, 0.9));
 }
 
 .icono-detalle {
+    color: #9076b5;
+    font-size: 28px;
+}
+
+.icono-detalle {
     font-size: 30px;
     color: #a18bc3;
 }
@@ -575,6 +638,12 @@ filter: drop-shadow(0 0 5px rgba(150, 120, 200, 0.9));
     }
 }
 
+.icono-detalle {
+    color: #9076b5;
+    font-size: 28px;
+}
+
+
 /* CUENTA REGRESIVA */
 
 .cuenta-regresiva {
@@ -651,6 +720,25 @@ filter: drop-shadow(0 0 5px rgba(150, 120, 200, 0.9));
     font-style: italic;
     margin-top: 35px;
 }
+
+@media (max-width: 480px) {
+
+    .contador {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+    }
+
+    .tiempo {
+        flex: 1;
+        min-width: 0;
+        width: auto;
+        padding: 12px 2px;
+    }
+}
+
 
 /* LLUVIA DE BRILLOS */
 
